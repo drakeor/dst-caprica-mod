@@ -43,8 +43,8 @@ local STRINGS = GLOBAL.STRINGS
 -- The character select screen lines
 STRINGS.CHARACTER_TITLES.caprica = "The Storm-Catcher"
 STRINGS.CHARACTER_NAMES.caprica = "Caprica"
-STRINGS.CHARACTER_DESCRIPTIONS.caprica = "*Perk 1\n*Perk 2\n*Perk 3"
-STRINGS.CHARACTER_QUOTES.caprica = "\"Quote\""
+STRINGS.CHARACTER_DESCRIPTIONS.caprica = "*Loves the Rain\n*Uses an electric spears\n*Sheds scales"
+STRINGS.CHARACTER_QUOTES.caprica = "\"SCREEEEEEEE!!!!!\""
 STRINGS.CHARACTER_SURVIVABILITY.caprica = "Slim"
 
 -- Custom speech strings
