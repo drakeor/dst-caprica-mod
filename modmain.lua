@@ -1,6 +1,7 @@
 PrefabFiles = {
 	"caprica",
 	"caprica_none",
+    "stormspear"
 }
 
 Assets = {
