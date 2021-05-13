@@ -1,8 +1,13 @@
+-- Prefabs
+
 PrefabFiles = {
 	"caprica",
 	"caprica_none",
     "stormspear"
 }
+
+
+-- Assets
 
 Assets = {
     Asset( "IMAGE", "images/saveslot_portraits/caprica.tex" ),
@@ -36,10 +41,38 @@ Assets = {
     Asset( "ATLAS", "images/names_gold_caprica.xml" ),
 }
 
-AddMinimapAtlas("images/map_icons/caprica.xml")
+-- Caprica has the stormdragon property
+AddPrefabPostInit("caprica", function(inst)
+    inst:AddTag("stormdragon")
+end)
 
+-- TUNING
+
+TUNING = GLOBAL.TUNING
+
+TUNING.STORMSPEAR =
+{
+    DAMAGE = 25,
+    ATTACKWEAR = 0.75,
+    SHADOW_WEAR = 0.5,
+}
+
+
+-- Weapon Lines
 local require = GLOBAL.require
 local STRINGS = GLOBAL.STRINGS
+
+local NAMES = GLOBAL.STRINGS.NAMES
+local RECIPE_DESC = GLOBAL.STRINGS.RECIPE_DESC
+local DESC = GLOBAL.STRINGS.CHARACTERS
+	
+NAMES.STORMSPEAR = "Storm Spear"
+RECIPE_DESC.STORMSPEAR = "Warning~ may attract lightning"
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.STORMSPEAR = "Particularly shocking!"
+
+AddMinimapAtlas("images/map_icons/caprica.xml")
+
+
 
 -- The character select screen lines
 STRINGS.CHARACTER_TITLES.caprica = "The Storm-Catcher"

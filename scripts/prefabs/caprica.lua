@@ -15,6 +15,7 @@ TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT.CAPRICA = {
 	"flint",
 	"twigs",
 	"twigs",
+	"stormspear"
 }
 
 local start_inv = {}
@@ -32,6 +33,12 @@ end
 local function onbecameghost(inst)
 	-- Remove speed modifier when becoming a ghost
    inst.components.locomotor:RemoveExternalSpeedMultiplier(inst, "caprica_speed_mod")
+end
+
+local function onlightning(inst)
+    inst.components.health:SetPercent(1)
+	inst.SoundEmitter:PlaySound("dontstarve/common/lightningrod")
+    SpawnPrefab("lightning_rod_fx").Transform:SetPosition(inst.Transform:GetWorldPosition())
 end
 
 -- When loading or spawning the character
@@ -57,13 +64,14 @@ end
 local master_postinit = function(inst)
 	-- Set starting inventory
     inst.starting_inventory = start_inv[TheNet:GetServerGameMode()] or start_inv.default
-	
+	--inst:AddTag("lightningrod")
+
 	-- choose which sounds this character will play
 	inst.soundsname = "willow"
-	
+
 	-- Uncomment if "wathgrithr"(Wigfrid) or "webber" voice is used
     --inst.talker_path_override = "dontstarve_DLC001/characters/"
-	
+
 	-- Stats	
 	inst.components.health:SetMaxHealth(TUNING.CAPRICA_HEALTH)
 	inst.components.hunger:SetMax(TUNING.CAPRICA_HUNGER)
