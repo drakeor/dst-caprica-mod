@@ -36,6 +36,7 @@ local function onbecameghost(inst)
 end
 
 local function onlightning(inst)
+	inst.sg:GoToState("electrocute")
     inst.components.health:SetPercent(1)
 	inst.SoundEmitter:PlaySound("dontstarve/common/lightningrod")
     SpawnPrefab("lightning_rod_fx").Transform:SetPosition(inst.Transform:GetWorldPosition())
@@ -45,6 +46,9 @@ end
 local function onload(inst)
     inst:ListenForEvent("ms_respawnedfromghost", onbecamehuman)
     inst:ListenForEvent("ms_becameghost", onbecameghost)
+
+	-- Hacky way to make lightning sticks charge
+	inst.components.playerlightningtarget:SetOnStrikeFn(onlightning)
 
     if inst:HasTag("playerghost") then
         onbecameghost(inst)
