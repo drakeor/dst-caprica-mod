@@ -1,5 +1,7 @@
 # Caprica Mod
 
+![image](https://github.com/drakeor/dst-caprica-mod/raw/main/bigportraits/caprica.png)
+
 ## Caprica
 
 - More combat orientated
