@@ -43,7 +43,7 @@ Assets = {
 
 -- Caprica has the stormdragon property
 AddPrefabPostInit("caprica", function(inst)
-    inst:AddTag("stormdragon")
+    inst:AddTag("dragon")
 end)
 
 -- TUNING
@@ -67,7 +67,7 @@ local RECIPE_DESC = GLOBAL.STRINGS.RECIPE_DESC
 local DESC = GLOBAL.STRINGS.CHARACTERS
 	
 NAMES.STORMSPEAR = "Storm Spear"
-RECIPE_DESC.STORMSPEAR = "Warning~ may attract lightning"
+RECIPE_DESC.STORMSPEAR = "Infused with lightning"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.STORMSPEAR = "Particularly shocking!"
 
 AddMinimapAtlas("images/map_icons/caprica.xml")
