@@ -1,6 +1,15 @@
 -- This information tells other players more about the mod
-name = "Caprica"
-description = "The Storm-Catcher."
+name = "Caprica the Dragon"
+description = [[
+    Adds the Caprica character to Don't Starve Together
+
+    - Starts with the Storm Spear, an electric weapon
+    - Slowly regains sanity during rain
+    - Getting struck by lightning instantly refills her health
+    - Takes 75% less overheat damage
+    
+    View more at https://twitter.com/bramble_wolf
+]]
 author = "Caprica and Drakeor"
 version = "1.0.0" -- This is the version of the template. Change it to your own number.
 
