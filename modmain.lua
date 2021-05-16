@@ -3,7 +3,8 @@
 PrefabFiles = {
 	"caprica",
 	"caprica_none",
-    "stormspear"
+    "stormspear",
+    "stormscale"
 }
 
 
@@ -70,6 +71,10 @@ NAMES.STORMSPEAR = "Storm Spear"
 RECIPE_DESC.STORMSPEAR = "Infused with lightning"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.STORMSPEAR = "Particularly shocking!"
 
+NAMES.STORMSCALE = "Storm Scale"
+RECIPE_DESC.STORMSCALE = "It pulses with energy"
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.STORMSCALE = "It pulses with energy!"
+
 AddMinimapAtlas("images/map_icons/caprica.xml")
 
 
@@ -79,7 +84,7 @@ STRINGS.CHARACTER_TITLES.caprica = "The Storm-Catcher"
 STRINGS.CHARACTER_NAMES.caprica = "Caprica"
 STRINGS.CHARACTER_DESCRIPTIONS.caprica = "*Loves the Rain\n*Uses an electric spears\n*Sheds scales"
 STRINGS.CHARACTER_QUOTES.caprica = "\"SCREEEEEEEE!!!!!\""
-STRINGS.CHARACTER_SURVIVABILITY.caprica = "Slim"
+STRINGS.CHARACTER_SURVIVABILITY.caprica = "Adequent"
 
 -- Custom speech strings
 STRINGS.CHARACTERS.CAPRICA = require "speech_caprica"
@@ -99,6 +104,16 @@ local skin_modes = {
         offset = { 0, -25 } 
     },
 }
+
+
+-- Add recipes
+local RECIPETABS = GLOBAL.RECIPETABS
+local TECH = GLOBAL.TECH
+-- Create a recipe. The atlas for a recipe must be specified after it is
+-- created as below.  Note that custom ingredients can be specified as above,
+-- or right in the Recipe call.
+local myprefabRecipe = Recipe("stormspear", { Ingredient("stormscale", 1, "images/inventoryimages/stormscale.xml"), Ingredient("rope", 1), Ingredient("twigs", 2) }, RECIPETABS.WAR, TECH.SCIENCE_ONE )
+myprefabRecipe.atlas = "images/inventoryimages/stormspear.xml"
 
 -- Add mod character to mod character list. Also specify a gender. Possible genders are MALE, FEMALE, ROBOT, NEUTRAL, and PLURAL.
 AddModCharacter("caprica", "FEMALE", skin_modes)

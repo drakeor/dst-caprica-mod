@@ -3,10 +3,12 @@ name = "Caprica the Dragon"
 description = [[
     Adds the Caprica character to Don't Starve Together
 
+    - Character isn't balanced by default (Slightly OP)
     - Starts with the Storm Spear, an electric weapon
     - Slowly regains sanity during rain
     - Getting struck by lightning instantly refills her health
     - Takes 75% less overheat damage
+    - Scales can be picked off with a razor once overgrown
     
     View more at https://twitter.com/bramble_wolf
 ]]
