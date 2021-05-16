@@ -112,8 +112,9 @@ local TECH = GLOBAL.TECH
 -- Create a recipe. The atlas for a recipe must be specified after it is
 -- created as below.  Note that custom ingredients can be specified as above,
 -- or right in the Recipe call.
-local myprefabRecipe = Recipe("stormspear", { Ingredient("stormscale", 1, "images/inventoryimages/stormscale.xml"), Ingredient("rope", 1), Ingredient("twigs", 2) }, RECIPETABS.WAR, TECH.SCIENCE_ONE )
+local myprefabRecipe = Recipe("stormspear", { Ingredient("stormscale", 1, "images/inventoryimages/stormscale.xml"), Ingredient("rope", 1), Ingredient("twigs", 2) }, RECIPETABS.WAR, TECH.NONE )
 myprefabRecipe.atlas = "images/inventoryimages/stormspear.xml"
+
 
 -- Add mod character to mod character list. Also specify a gender. Possible genders are MALE, FEMALE, ROBOT, NEUTRAL, and PLURAL.
 AddModCharacter("caprica", "FEMALE", skin_modes)
