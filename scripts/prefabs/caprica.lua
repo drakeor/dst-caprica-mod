@@ -117,7 +117,7 @@ local function OnResetBeard(inst)
 end
 
 --tune the beard economy...
-local BEARD_DAYS = 4
+local BEARD_DAYS = 3
 local BEARD_BITS = 2
 
 local function OnGrowScales(inst, skinname)

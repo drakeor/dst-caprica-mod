@@ -54,7 +54,7 @@ TUNING = GLOBAL.TUNING
 
 TUNING.STORMSPEAR =
 {
-    DAMAGE = 25,
+    DAMAGE = 26,
     ATTACKWEAR = 0.75,
     SHADOW_WEAR = 0.5,
 }
@@ -105,7 +105,7 @@ elseif stat_alloc == 7 then
 end
 
 TUNING.CAPRICA_OVERHEAT_KILL_TIME = 240
-TUNING.CAPRICA_SANITY_RAIN_BOOST = 0.5
+TUNING.CAPRICA_SANITY_RAIN_BOOST = 1
 
 
 -- Weapon Lines
@@ -169,7 +169,9 @@ local myprefabRecipe = Recipe("stormspear", { Ingredient("stormscale", 1, "image
 myprefabRecipe.atlas = "images/inventoryimages/stormspear.xml"
 
 local myprefabRecipe2 = Recipe("armor_stormscale", { Ingredient("stormscale", 1, "images/inventoryimages/stormscale.xml"), Ingredient("armorwood", 1) }, RECIPETABS.WAR, TECH.NONE )
-myprefabRecipe2.atlas = "images/inventoryimages/armor_stormscale.xml"
+
+local myprefabRecipe3 = Recipe("blowdart_yellow", { Ingredient("stormscale", 1, "images/inventoryimages/dragonfur.xml"), Ingredient("twigs", 1),  Ingredient("rope", 1)}, RECIPETABS.TOOLS, TECH.NONE )
+
 
 -- Add mod character to mod character list. Also specify a gender. Possible genders are MALE, FEMALE, ROBOT, NEUTRAL, and PLURAL.
 AddModCharacter("caprica", "FEMALE", skin_modes)
