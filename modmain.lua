@@ -4,7 +4,8 @@ PrefabFiles = {
 	"caprica",
 	"caprica_none",
     "stormspear",
-    "stormscale"
+    "stormscale",
+    "armor_stormscale"
 }
 
 
@@ -56,6 +57,14 @@ TUNING.STORMSPEAR =
     DAMAGE = 25,
     ATTACKWEAR = 0.75,
     SHADOW_WEAR = 0.5,
+}
+
+TUNING.ARMOR_STORMSCALE =
+{
+    -- Twice as strong as log armor
+    ARMOR = TUNING.WILSON_HEALTH * 6 * TUNING.MULTIPLAYER_ARMOR_DURABILITY_MODIFIER,
+    -- As good absorption as log armor
+    ABSORPTION = .8 * TUNING.MULTIPLAYER_ARMOR_ABSORPTION_MODIFIER
 }
 
 -- Caprica Character Tuning
@@ -110,6 +119,10 @@ local DESC = GLOBAL.STRINGS.CHARACTERS
 NAMES.STORMSPEAR = "Storm Spear"
 RECIPE_DESC.STORMSPEAR = "Infused with lightning"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.STORMSPEAR = "Particularly shocking!"
+
+NAMES.ARMOR_STORMSCALE = "Stormscale Armor"
+RECIPE_DESC.ARMOR_STORMSCALE = "More durable than log armor"
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.ARMOR_STORMSCALE = "More durable than log armor"
 
 NAMES.STORMSCALE = "Storm Scale"
 RECIPE_DESC.STORMSCALE = "It pulses with energy"
