@@ -169,8 +169,9 @@ local myprefabRecipe = Recipe("stormspear", { Ingredient("stormscale", 1, "image
 myprefabRecipe.atlas = "images/inventoryimages/stormspear.xml"
 
 local myprefabRecipe2 = Recipe("armor_stormscale", { Ingredient("stormscale", 1, "images/inventoryimages/stormscale.xml"), Ingredient("armorwood", 1) }, RECIPETABS.WAR, TECH.NONE )
+myprefabRecipe2.atlas = "images/inventoryimages/armor_stormscale.xml"
 
-local myprefabRecipe3 = Recipe("blowdart_yellow", { Ingredient("stormscale", 1, "images/inventoryimages/dragonfur.xml"), Ingredient("twigs", 1),  Ingredient("rope", 1)}, RECIPETABS.TOOLS, TECH.NONE )
+local myprefabRecipe3 = Recipe("icestaff", { Ingredient("stormscale", 1, "images/inventoryimages/dragonfur.xml"), Ingredient("spear", 1)}, RECIPETABS.TOOLS, TECH.NONE )
 
 
 -- Add mod character to mod character list. Also specify a gender. Possible genders are MALE, FEMALE, ROBOT, NEUTRAL, and PLURAL.
