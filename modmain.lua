@@ -168,6 +168,8 @@ local TECH = GLOBAL.TECH
 local myprefabRecipe = Recipe("stormspear", { Ingredient("stormscale", 1, "images/inventoryimages/stormscale.xml"), Ingredient("rope", 1), Ingredient("twigs", 2) }, RECIPETABS.WAR, TECH.NONE )
 myprefabRecipe.atlas = "images/inventoryimages/stormspear.xml"
 
+local myprefabRecipe2 = Recipe("armor_stormscale", { Ingredient("stormscale", 1, "images/inventoryimages/stormscale.xml"), Ingredient("armorwood", 1) }, RECIPETABS.WAR, TECH.NONE )
+myprefabRecipe2.atlas = "images/inventoryimages/armor_stormscale.xml"
 
 -- Add mod character to mod character list. Also specify a gender. Possible genders are MALE, FEMALE, ROBOT, NEUTRAL, and PLURAL.
 AddModCharacter("caprica", "FEMALE", skin_modes)
