@@ -86,7 +86,7 @@ local function onload(inst)
     inst:ListenForEvent("ms_becameghost", onbecameghost)
 
 	-- Hacky way to make lightning sticks charge
-	inst.components.playerlightningtarget:SetOnStrikeFn(onlightning)
+	--inst.components.playerlightningtarget:SetOnStrikeFn(onlightning)
 
     if inst:HasTag("playerghost") then
         onbecameghost(inst)
@@ -104,6 +104,9 @@ local common_postinit = function(inst)
 
 	--bearded (from beard component) added to pristine state for optimization
 	inst:AddTag("bearded")
+
+	-- Make a lightning rod
+	inst:AddTag("lightningrod")
 
 	-- Minimap icon
 	inst.MiniMapEntity:SetIcon( "caprica.tex" )
@@ -160,6 +163,9 @@ local master_postinit = function(inst)
 
 	-- Uncomment if "wathgrithr"(Wigfrid) or "webber" voice is used
     --inst.talker_path_override = "dontstarve_DLC001/characters/"
+
+	-- Listening for lightning event
+	inst:ListenForEvent("lightningstrike", onlightning)
 
 	-- Stats	
 	inst.components.health:SetMaxHealth(TUNING.CAPRICA_HEALTH)
